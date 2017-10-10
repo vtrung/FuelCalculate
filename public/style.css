@@ -1,0 +1,16 @@
+.main-container{
+    margin: 20px;
+}
+.carblock{
+    width: 550px;
+    float:left;
+    font-size: 16px;
+}
+
+.infoblock{
+    min-height: 50px;
+    width: 100%;
+    float: left;
+    margin: 15px auto;
+    font-size: 18px;
+}

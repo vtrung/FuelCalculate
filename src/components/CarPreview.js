@@ -1,10 +1,11 @@
 import React from 'react';
 
 
+
 class CarPreview extends React.Component {
     constructor(props){
         super(props);
-        console.log(props);
+        //console.log(props);
     }
 
     state = {
@@ -12,16 +13,17 @@ class CarPreview extends React.Component {
     }
 
     componentDidMount(){
-        console.log(this.props)
+        //console.log(this.props)
         var test = this.props.city;
         var test2 = this.props.hwy;
-        console.log(test, test2);
+        //console.log(test, test2);
         let avg = test + test2;
         avg = avg/2;
         this.setState({
             average: avg
         })
-        //onsole.log("MOunted");
+        console.log(this.props.city);
+        console.log("MOunted");
     }
 
     componentWillUnmount(){
@@ -31,7 +33,16 @@ class CarPreview extends React.Component {
     render(){
         return (
             <div className="CarPreview">
-                {this.props.id} {this.props.year} {this.props.make} {this.props.model} {this.state.average}
+                {/* {this.props.id} <br/> */}
+                <img src="/images/nophoto.gif" />
+                <div>
+                    {this.props.year} {this.props.make} {this.props.model} <br/>
+                    Transmission: {this.props.trans}<br/>
+                    City: {this.props.city} <br/>
+                    Hwy: {this.props.hwy} <br/>
+                    Combined: {this.props.comb} <br/>
+                </div>
+                
             </div>
         );
     }

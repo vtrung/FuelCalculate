@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import CarPreview from './CarPreview';
+import CarList from './CarList';
 
 import data from '../testData';
 
@@ -30,17 +31,13 @@ class App extends React.Component {
 
     render(){
         return (
-            <h1> 
-                <div>Car MERN</div>
-                <div>
-                    {this.state.test}
-                </div>
+            <div className="main-container"> 
+                <h1>Car MERN</h1>
+
                 <Header message={this.state.test}/>
-                {this.state.cars.map( car => 
-                    <CarPreview key={car.id} {...car} />
-                )}
                 
-            </h1>
+                <CarList cars={this.state.cars}/>
+            </div>
         );
     }
     
