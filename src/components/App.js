@@ -13,7 +13,7 @@ class App extends React.Component {
     //     }
     // }
     state = {
-        test: "Locate you vehicle information here",
+        test: "Locate your vehicle information here",
         cars: []
     };
 
