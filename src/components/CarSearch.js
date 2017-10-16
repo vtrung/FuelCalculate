@@ -5,12 +5,12 @@ class CarSearch extends React.Component {
         super(props);
         //console.log(props);
         this.state = {
-
+            year: "",
+            make: "",
+            model: "",
+            type: "",
+            car: null
         }
-    }
-
-    state = {
-        average: 0
     }
 
     componentDidMount(){
@@ -41,7 +41,7 @@ class CarSearch extends React.Component {
         return (
             <div className="CarSearch">
 
-                <select onChange={this.handleChange2}>
+                <select onChange={this.handleYear}>
                     <option value=""></option>
                     {this.props.cars.map( (car, index) => 
                         <option key={car.id} value={index}>
@@ -50,7 +50,7 @@ class CarSearch extends React.Component {
                     )}
                 </select>
 
-                <select onChange={this.handleChange2}>
+                <select onChange={this.handleMake}>
                     <option value=""></option>
                     {this.props.cars.map( (car, index) => 
                         <option key={car.id} value={index}>
@@ -59,7 +59,7 @@ class CarSearch extends React.Component {
                     )}
                 </select>
 
-                <select onChange={this.handleChange2}>
+                <select onChange={this.handleModel}>
                     <option value=""></option>
                     {this.props.cars.map( (car, index) => 
                         <option key={car.id} value={index}>
@@ -68,7 +68,7 @@ class CarSearch extends React.Component {
                     )}
                 </select>
 
-                <select onChange={this.handleChange2}>
+                <select onChange={this.handleType}>
                     <option value=""></option>
                     {this.props.cars.map( (car, index) => 
                         <option key={car.id} value={index}>

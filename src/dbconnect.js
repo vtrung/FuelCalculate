@@ -1,14 +1,18 @@
 var DBConnect = {
-    formatCurrency: function(num){
-        if(isNaN(num))
-            return num;
-        if(num > 0){
-            return "$"+ num.toPrecision(3);
-        } else if(num < 0) {
-            var temp = Math.abs(num);
-            return "-$"+ temp.toPrecision(3);
-        }
-        return "$0";
+    getYears: function(){
+        //get year from mongo
+    },
+    getMakes: function(year){
+        //get all makes from a year
+    },
+    getModels: function(year, make){
+        //get all models from year and make
+    },
+    getTypes: function(year, make, model){
+        //get all types from year and make
+    },
+    getCarById: function(id){
+        // get car object by id
     }
 }
 
