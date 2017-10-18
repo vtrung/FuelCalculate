@@ -16,7 +16,8 @@
     "json-loader": "^0.5.7",
     "mongodb": "^2.2.31",
     "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react-dom": "^15.6.1",
+    "mongoose": "^4.11.9"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
